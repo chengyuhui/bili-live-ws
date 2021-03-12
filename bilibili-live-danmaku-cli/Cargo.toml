@@ -1,0 +1,20 @@
+[package]
+name = "bilibili-live-danmaku-cli"
+version = "0.1.0"
+authors = ["Harry Cheng <chengyuhui1@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bilibili-live-danmaku = { path = "../bilibili-live-danmaku" }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+tokio = { version = "1", features = ["full"] }
+futures-util = { version = "0.3", default-features = false, features = ["async-await", "sink", "std"] }
+reqwest = { version = "0.11.1", features = ["json"] }
+
+anyhow = "1"
+colored = "2"
